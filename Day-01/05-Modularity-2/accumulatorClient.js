@@ -1,0 +1,6 @@
+var factory = require('./accumulator')
+var acc1 = factory()
+acc1.add(100)
+acc1.getResult()
+var acc2 = factory()
+acc2.getResult()
