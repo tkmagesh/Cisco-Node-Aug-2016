@@ -6,8 +6,11 @@ function exec(req, res, middlewares){
 		next = function(){
 			exec(req, res, remaining);
 		};
-	if (typeof first === 'function')
+	if (typeof first === 'function'){
 		first(req, res, next);	
+	} else {
+		res.end();
+	}
 }
 
 function app(req, res){

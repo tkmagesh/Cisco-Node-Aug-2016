@@ -1,0 +1,30 @@
+<style>
+	.completed{
+		color : red;
+		text-decoration: line-through;
+		font-style: italic;
+		font-weight: bold;
+	}
+</style>
+<h1>Task Manager</h1>
+<hr>
+<div>
+	<span class="completed">{{this.completedCount}}</span>
+	<span> / </span>
+	<span>{{this.list.length}}</span>
+</div>
+<ol>
+	{{#each list}}
+		<li>
+			{{#if this.isCompleted}}
+				<span class="completed">{{this.name}}</span> 
+			{{else}}
+				<span>{{this.name}}</span> 
+			{{/if}}
+			<span>
+				<a href="/tasks/toggle/{{this.id}}">X</a>
+			</span>
+		</li>
+	{{/each}}
+</ol>
+<a href="/tasks/new">Create New</a>

@@ -1,0 +1,18 @@
+{
+  "name": "08-appserver",
+  "version": "0.0.1",
+  "description": "a sample app built using node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "Magesh K",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.3"
+  }
+}
